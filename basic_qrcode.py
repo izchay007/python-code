@@ -9,7 +9,7 @@ def generate_qr_code(text, file_name):
     )
     qr.add_data(text)
     qr.make(fit=True)
-    img = qr.make_image(fill_color="#66ff00", back_color="#ffffff")
+    img = qr.make_image(fill_color="maroon", back_color="white")
     img.save(file_name)
 
 # Input text to generate QR code for 
