@@ -2,6 +2,9 @@ from tkinter import*
 
 root = Tk()
 
+e = Entry(root, width=50, borderwidth=5)
+e.pack()
+
 def myClick():
     myLabel = Label(root, text="Look! I clicked a button!!")
     myLabel.pack()
