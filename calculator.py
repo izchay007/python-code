@@ -9,9 +9,32 @@ e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 #e.insert(0, "Enter your name: ")
 
 def button_click(number):
-    #e.delete(0,END)
     current = e.get()
+    e.delete(0,END)
     e.insert(0,str(current) + str(number))
+
+def button_clear():
+    e.delete(0,END)
+
+def button_add():
+    first_number = e.get()
+    global f_num
+    f_num = int(first_number)
+    e.delete(0,END)
+
+def button_equal():
+    second_number = e.get()
+    e.delete(0,END)
+    e.insert(0, f_num + int(second_number))
+
+def button_minus():
+    return
+
+def button_multiply():
+    return
+
+def button_divide():
+    return
 
 #Define buttons
 button1 = Button(root,text="1", padx=40, pady=20, command=lambda: button_click(1))
@@ -24,9 +47,13 @@ button7 = Button(root,text="7", padx=40, pady=20, command=lambda: button_click(7
 button8 = Button(root,text="8", padx=40, pady=20, command=lambda: button_click(8))
 button9 = Button(root,text="9", padx=40, pady=20, command=lambda: button_click(9))
 button0 = Button(root,text="0", padx=40, pady=20, command=lambda: button_click(0))
-button_add = Button(root,text="+", padx=40, pady=20, command=lambda: button_click)
-button_equal = Button(root,text="=", padx=40, pady=20, command=lambda: button_click)
-button_clear = Button(root,text="Clear", padx=40, pady=20, command=lambda: button_click)
+button_add = Button(root,text="+", padx=39, pady=20, command=button_add)
+button_equal = Button(root,text="=", padx=87, pady=20, command=button_equal)
+button_clear = Button(root,text="Clear", padx=79, pady=20, command=button_clear)
+
+button_minus = Button(root,text="-", padx=40, pady=20, command=button_minus)
+button_multiply = Button(root,text="*", padx=40, pady=20, command=button_multiply)
+button_divide = Button(root,text="/", padx=40, pady=20, command=button_divide)
 
 #Put buttons on screen
 button1.grid(row=3,column=0)
@@ -42,8 +69,12 @@ button8.grid(row=1,column=1)
 button9.grid(row=1,column=2)
 
 button0.grid(row=4,column=0)
-#button_add.grid(row=4,column=0)
-#button_equal.grid(row=4,column=0)
-#button_clear.grid(row=4,column=0)
+button_add.grid(row=5,column=0)
+button_equal.grid(row=5,column=1, columnspan=2)
+button_clear.grid(row=4,column=1, columnspan=2)
+
+button_minus.grid(row=6,column=0)
+button_multiply.grid(row=6,column=1)
+button_divide.grid(row=6,column=2)
 
 root.mainloop()
