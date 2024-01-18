@@ -1,4 +1,5 @@
 from tkinter import*
+import tkinter.font as tkFont
 
 root = Tk()
 root.title("Simple Calculator")
@@ -65,9 +66,12 @@ def button_divide():
     f_num = int(first_number)
     e.delete(0,END)
 
+button_font1 = tkFont.Font(family="Helvetica", size=9, weight="bold")
+button_font = tkFont.Font(family="Helvetica", size=20, weight="bold")
+
 #Define buttons
-button1 = Button(root,text="1", padx=40, pady=20, command=lambda: button_click(1))
-button2 = Button(root,text="2", padx=40, pady=20, command=lambda: button_click(2))
+button1 = Button(root,text="1", padx=40, pady=20, font=button_font1, command=lambda: button_click(1))
+button2 = Button(root,text="2", padx=40, pady=20, font=button_font1, command=lambda: button_click(2))
 button3 = Button(root,text="3", padx=40, pady=20, command=lambda: button_click(3))
 button4 = Button(root,text="4", padx=40, pady=20, command=lambda: button_click(4))
 button5 = Button(root,text="5", padx=40, pady=20, command=lambda: button_click(5))
@@ -80,9 +84,9 @@ button_add = Button(root,text="+", padx=39, pady=20, command=button_add)
 button_equal = Button(root,text="=", padx=87, pady=20, command=button_equal)
 button_clear = Button(root,text="Clear", padx=79, pady=20, command=button_clear)
 
-button_minus = Button(root,text="-", padx=40, pady=20, command=button_minus)
-button_multiply = Button(root,text="*", padx=40, pady=20, command=button_multiply)
-button_divide = Button(root,text="/", padx=40, pady=20, command=button_divide)
+button_minus = Button(root,text="-", padx=40, pady=20, font=button_font, command=button_minus)
+button_multiply = Button(root,text="*", padx=40, pady=20, font=button_font, command=button_multiply)
+button_divide = Button(root,text="/", padx=40, pady=20, font=button_font, command=button_divide)
 
 #Put buttons on screen
 button1.grid(row=3,column=0)
