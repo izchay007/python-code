@@ -67,7 +67,7 @@ def button_divide():
     e.delete(0,END)
 
 button_font1 = tkFont.Font(family="Helvetica", size=9, weight="bold")
-button_font = tkFont.Font(family="Helvetica", size=20, weight="bold")
+button_font = tkFont.Font(family="Helvetica", size=13, weight="bold")
 
 #Define buttons
 button1 = Button(root,text="1", padx=40, pady=20, font=button_font1, command=lambda: button_click(1))
@@ -85,7 +85,7 @@ button_equal = Button(root,text="=", padx=87, pady=20, command=button_equal)
 button_clear = Button(root,text="Clear", padx=79, pady=20, command=button_clear)
 
 button_minus = Button(root,text="-", padx=40, pady=20, font=button_font, command=button_minus)
-button_multiply = Button(root,text="*", padx=40, pady=20, font=button_font, command=button_multiply)
+button_multiply = Button(root,text="x", padx=40, pady=20, font=button_font, command=button_multiply)
 button_divide = Button(root,text="/", padx=40, pady=20, font=button_font, command=button_divide)
 
 #Put buttons on screen
