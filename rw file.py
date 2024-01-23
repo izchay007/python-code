@@ -28,3 +28,6 @@ print(file1.read())
 print()
 file1.close()
 
+#https://www.geeksforgeeks.org/writing-to-file-in-python/
+#https://www.geeksforgeeks.org/reading-writing-text-files-python/
+
