@@ -1,10 +1,4 @@
-price = 100
+number = int(input("Enter a number : "))
 
-if price > 100:
- print("price is greater than 100")
-
-if price == 100:
-  print("price is 100")
-
-if price < 100:
-    print("price is less than 100")
+print("last digit of number is", number %10 )
+    
